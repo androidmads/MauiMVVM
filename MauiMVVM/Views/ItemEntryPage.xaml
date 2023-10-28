@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiMVVM.Views.ItemEntryPage"
+             Title="Item Entry">
+    <StackLayout Margin="20"
+                 Spacing="10">
+        <VerticalStackLayout>
+            <Label Text="Name:"
+                   FontSize="16"/>
+            <Entry Text="{Binding Name}" 
+                   Placeholder="Item Name"/>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label Text="Description:"
+                   FontSize="16"/>
+            <Entry Text="{Binding Description}" 
+                   Placeholder="Item Description"/>
+        </VerticalStackLayout>
+
+
+        <Button x:Name="btn_save" 
+                Text="Save"
+                Command="{Binding SaveCommand}"/>
+    </StackLayout>
+</ContentPage>
